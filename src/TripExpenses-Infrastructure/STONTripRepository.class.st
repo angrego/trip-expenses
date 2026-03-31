@@ -2,8 +2,7 @@ Class {
 	#name : 'STONTripRepository',
 	#superclass : 'Object',
 	#instVars : [
-		'filePath',
-		'repository'
+		'filePath'
 	],
 	#category : 'TripExpenses-Infrastructure',
 	#package : 'TripExpenses-Infrastructure'
@@ -56,16 +55,6 @@ STONTripRepository >> findById: anId [
     ^ self findAll
         detect: [ :t | t id = anId ]
         ifNone: [ Error signal: 'Trip not found: ' , anId ]
-]
-
-{ #category : 'as yet unclassified' }
-STONTripRepository >> repository [ 
-^ repository
-]
-
-{ #category : 'as yet unclassified' }
-STONTripRepository >> repository: r [ 
-repository := r 
 ]
 
 { #category : 'accessing' }

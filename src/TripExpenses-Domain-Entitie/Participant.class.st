@@ -15,7 +15,7 @@ Participant class >> name: aString [
 		Error signal: 'Name cannot be blank' ].
 	^ self new
 		  id: ParticipantId generate;
-		  participant: aString;
+		  name: aString;
 		  yourself
 ]
 

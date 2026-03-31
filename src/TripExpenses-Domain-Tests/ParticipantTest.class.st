@@ -40,11 +40,11 @@ ParticipantTest >> testEmptyNameRaisesError [
 { #category : 'tests' }
 ParticipantTest >> testEqualityBasedOnId [
 
-	[
+
 		| a b |
 		a := Participant name: 'Alice'.
 		b := Participant name: 'Alice'.
-		self deny: a equals: b ]
+		self deny: a equals: b 
 ]
 
 { #category : 'tests' }
