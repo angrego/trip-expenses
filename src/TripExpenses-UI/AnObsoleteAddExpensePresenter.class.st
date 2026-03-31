@@ -10,7 +10,8 @@ Class {
 		'onSaveCallback'
 	],
 	#category : 'TripExpenses-UI-CodeParadise',
-	#package : 'TripExpenses-UI-CodeParadise'
+	#package : 'TripExpenses-UI',
+	#tag : 'CodeParadise'
 }
 
 { #category : 'as yet unclassified' }
