@@ -41,7 +41,8 @@ Money >> - aMoney [
 { #category : 'arithmetic' }
 Money >> = other [
 
-	self class = other class ifFalse: [ Error signal: 'Pas un objet Money' ].
+	self class = other class ifFalse: [
+		^ false].
 
 	^ amount = other amount and: [ currency = other currency ]
 ]

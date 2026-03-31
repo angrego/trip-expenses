@@ -49,8 +49,3 @@ Participant >> name [
 Participant >> name: aString [ 
 	name := aString
 ]
-
-{ #category : 'accessing' }
-Participant >> participant:aString [
-name:=aString 
-]

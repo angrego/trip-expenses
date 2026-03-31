@@ -1,5 +1,5 @@
 Class {
-	#name : 'ParicipantWeightTest',
+	#name : 'ParticipantWeightTest',
 	#superclass : 'TestCase',
 	#instVars : [
 		'greg'
@@ -9,13 +9,13 @@ Class {
 }
 
 { #category : 'running' }
-ParicipantWeightTest >> setUp [
+ParticipantWeightTest >> setUp [
 
 	greg := Participant name: 'Greg'
 ]
 
 { #category : 'running' }
-ParicipantWeightTest >> testCustomWeight [
+ParticipantWeightTest >> testCustomWeight [
     | pw |
     pw := ParticipantWeight participant: greg weight: 2.
     self assert: pw weight    equals: 2.
@@ -23,18 +23,18 @@ ParicipantWeightTest >> testCustomWeight [
 ]
 
 { #category : 'running' }
-ParicipantWeightTest >> testDefaultWeightIsOne [
+ParticipantWeightTest >> testDefaultWeightIsOne [
     | pw |
     pw := ParticipantWeight participant: greg.
     self assert: pw weight equals: 1
 ]
 
 { #category : 'running' }
-ParicipantWeightTest >> testNegativeWeightRaisesError [ 
+ParticipantWeightTest >> testNegativeWeightRaisesError [ 
     self should: [ ParticipantWeight participant: greg weight: -1 ] raise: Error
 ]
 
 { #category : 'running' }
-ParicipantWeightTest >> testZeroWeightRaisesError [
+ParticipantWeightTest >> testZeroWeightRaisesError [
     self should: [ ParticipantWeight participant: greg weight: 0 ] raise: Error
 ]

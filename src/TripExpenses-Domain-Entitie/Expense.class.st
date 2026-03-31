@@ -9,8 +9,7 @@ Class {
 		'splitRule',
 		'gifts',
 		'date',
-		'tags',
-		'contributions'
+		'tags'
 	],
 	#category : 'TripExpenses-Domain-Entitie',
 	#package : 'TripExpenses-Domain-Entitie'
@@ -45,13 +44,6 @@ Expense class >> validatePayments: payments totalAmount: total [
     paid = total amount ifFalse: [
         Error signal: 'Payments (' , paid printString ,
             ') do not match total (' , total amount printString , ')' ]
-]
-
-{ #category : 'accessing' }
-Expense >> actualContributionFor: aParticipant [ 
-    contributions detect: [ :c | c participant = aParticipant ]
-                  ifFound: [ :c | ^ c amount ]
-                  ifNone: [ ^ Money amount: 0 currency: totalAmount currency ]
 ]
 
 { #category : 'adding' }

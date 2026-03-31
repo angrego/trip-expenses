@@ -15,11 +15,6 @@ STONTripRepository class >> default [
 ]
 
 { #category : 'as yet unclassified' }
-STONTripRepository class >> inMemory [
-^ self new
-]
-
-{ #category : 'as yet unclassified' }
 STONTripRepository class >> onFile: aFileReference [
 
 	^ self new
@@ -28,35 +23,8 @@ STONTripRepository class >> onFile: aFileReference [
 ]
 
 { #category : 'as yet unclassified' }
-STONTripRepository >> addExpense: anExpense toTrip: aTripId [ 
-    | trip |
-    trip := self findById: aTripId.
-    trip addExpense: anExpense.
-    self save: trip.
-    ^ anExpense
-]
-
-{ #category : 'as yet unclassified' }
-STONTripRepository >> addParticipant: aName toTrip: aTripId [
-    | trip participant |
-    trip := repository findById: aTripId.
-    participant := Participant name: aName.
-    trip addParticipant: participant.
-    repository save: trip.
-    ^ participant
-]
-
-{ #category : 'as yet unclassified' }
 STONTripRepository >> allTrips [
     ^ self findAll
-]
-
-{ #category : 'as yet unclassified' }
-STONTripRepository >> createTrip: aName currency: aCurrency [ 
-    | trip |
-    trip := Trip name: aName currency: aCurrency.
-    repository save: trip.
-    ^ trip
 ]
 
 { #category : 'accessing' }

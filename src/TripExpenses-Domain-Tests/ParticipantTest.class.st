@@ -10,7 +10,8 @@ Class {
 
 { #category : 'tests' }
 ParticipantTest >> testBlankNameRaisesError [
-    self should: [ Participant participant: '   ' ] raise: Error
+
+	self should: [ Participant name: '   ' ] raise: Error
 ]
 
 { #category : 'tests' }
@@ -31,17 +32,19 @@ ParticipantTest >> testDifferentNamesNotEqual [
 ]
 
 { #category : 'tests' }
-ParticipantTest >> testEmptyNameRaisesError [ 
-    self should: [ Participant participant: '' ] raise: Error
+ParticipantTest >> testEmptyNameRaisesError [
+
+	self should: [ Participant name: '' ] raise: Error
 ]
 
 { #category : 'tests' }
-ParticipantTest >> testEqualityBasedOnId [ [
-    | a b |
-    a := Participant participant: 'Alice'.
-    b := Participant participant: 'Alice'.
-    self deny: a equals: b
-]
+ParticipantTest >> testEqualityBasedOnId [
+
+	[
+		| a b |
+		a := Participant name: 'Alice'.
+		b := Participant name: 'Alice'.
+		self deny: a equals: b ]
 ]
 
 { #category : 'tests' }
