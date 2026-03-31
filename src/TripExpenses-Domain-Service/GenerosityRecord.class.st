@@ -35,8 +35,18 @@ GenerosityRecord >> generosity: aMoney [
 ]
 
 { #category : 'accessing' }
+GenerosityRecord >> giftGiven [
+	^ giftGiven
+]
+
+{ #category : 'accessing' }
 GenerosityRecord >> giftGiven: aCollection [ 
 	giftGiven:= aCollection asOrderedCollection 
+]
+
+{ #category : 'accessing' }
+GenerosityRecord >> giftReceived [
+	^ giftReceived
 ]
 
 { #category : 'accessing' }
